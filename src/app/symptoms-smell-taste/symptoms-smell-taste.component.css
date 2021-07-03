@@ -1,0 +1,32 @@
+.button {
+    border: none;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36px;
+    margin: 4px;
+    cursor: pointer;
+    vertical-align: middle;
+    width: 200px;
+  }
+  .button1 {background-color: #4CAF50;} /* Green */
+  .button2 {background-color: gold;} /* Yellow */
+  .button3 {background-color: tomato;} /* Red */
+  
+  div {
+    background-color: white;
+    text-align: center;
+  }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.button:hover, .button:focus, .button:active, .button.active, .open>.dropdown-toggle.button {
+    color: #fff;
+    background-color:royalblue;
+    border-color: #285e8e; /*set the color you want here*/
+}

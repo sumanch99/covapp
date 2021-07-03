@@ -1,0 +1,19 @@
+<form name="searchForm" #searchForm="ngForm">
+    <input type="text" ngDefaultControl  ngModel #token="ngModel" name="token" id="myInput" (keyup)="findHospital(token)" style="background-color:rgb(214, 228, 245);" placeholder="Search for Hospitals..">
+</form>
+
+<div class="card" ngModel ngDefaultControl  #hospitalDetails="ngModel" class="mb-5" *ngFor="let hospital of hospitals">
+    <div *ngIf="myToken==''|| hospital.name.includes(myToken) || hospital.city.includes(myToken) || hospital.state.includes(myToken)">
+        <div class="card-header" style="background-color: royalblue; color: seashell;">
+            <b>{{hospital.name}}</b>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="color: royalblue;background-color:rgb(223, 219, 219);font-weight: bold;">City: {{hospital.city}}</li>
+            <li class="list-group-item" style="color: royalblue;background-color:rgb(223, 219, 219);font-weight: bold;">Admission Capacity: {{hospital.admissionCapacity}}</li>
+            <li class="list-group-item" style="color: royalblue;background-color:rgb(223, 219, 219);font-weight: bold;">Hospital beds: {{hospital.hospitalBeds}}</li>
+            <li class="list-group-item" style="color: royalblue;background-color:rgb(223, 219, 219);font-weight: bold;">Ownership: {{hospital.ownership}}</li>
+            <li class="list-group-item" style="color: royalblue;background-color:rgb(223, 219, 219);font-weight: bold;">State: {{hospital.state}}</li>
+        </ul>
+    </div>
+</div>
+<br>

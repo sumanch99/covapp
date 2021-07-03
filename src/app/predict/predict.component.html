@@ -1,0 +1,22 @@
+<div class="mt-5 mb-5">  
+    <img src="https://www.statnews.com/wp-content/uploads/2020/02/Coronavirus-CDC-645x645.jpg" class="img-circle center" alt="Cinque Terre" height="200" width="250">
+    <div>
+        <h2><p [style.color]="myColor"><b>Your chances of getting affected by covid is : {{percentage}} %</b></p></h2>
+    </div>
+    <div *ngIf="percentage>=90" class="mt-5">
+        <button class=" btn btn-warning">
+            <a routerLink="/hospitals" style="text-decoration: none; color: seashell; font-weight: bolder;">Click here to view Hospital details</a>
+        </button>
+    </div>
+    <div *ngIf="percentage>=60" class="mt-5 ml-5">
+        <button class=" btn btn-warning">
+            <a routerLink="/doctors" style="text-decoration: none; color: seashell; font-weight: bolder;">Click here to view Doctor details to contact</a>
+        </button>
+    </div>
+</div>
+
+
+                                           
+                                    
+                            
+                            
